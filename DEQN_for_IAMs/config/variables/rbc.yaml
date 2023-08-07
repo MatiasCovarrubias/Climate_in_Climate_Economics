@@ -1,0 +1,61 @@
+# --------------------------------------------------------------------------- #
+# State variables
+# --------------------------------------------------------------------------- #
+states:
+  # ------------------------------------------------------------------------- #
+  # Economic state
+  # ------------------------------------------------------------------------- #
+  - name: k_norm  # Capital stock normalized (log deviation from steady state)
+    init:
+      distribution: truncated_normal
+      kwargs:
+        mean: 0
+        stddev: 0.0
+  - name: a_norm  # log TFP normalized (log deviation from steady state)
+    init:
+      distribution: truncated_normal
+      kwargs:
+        mean: 0
+        stddev: 0.0
+
+
+# --------------------------------------------------------------------------- #
+# Policy variables
+# --------------------------------------------------------------------------- #
+policies:
+  - name: Kplus_norm  # Investment policy
+    activation: tf.keras.activations.softplus
+  - name: C_norm  # Investment policy
+    activation: tf.keras.activations.softplus
+
+definitions:
+
+  # ------------------------------------------------------------------------- #
+  # Exogenous parameters
+  # ------------------------------------------------------------------------- #
+  - name: beta  # discount factor
+  - name: alpha  # capital share
+  - name: delta  # depreciation
+  - name: rho  # persistence
+  - name: shock_sd  # standard deviation of TFP innovations
+  - name: k_ss # log capital in steady state
+  - name: i_ss # log investment in steady state
+
+  # ------------------------------------------------------------------------- #
+  # Economic variables
+  # ------------------------------------------------------------------------- #
+  - name: K  # K not normalized
+  - name: Y  # Production
+  - name: a  # TFP in logs
+  - name: A  # TFP in level
+  - name: Y  # Production
+  - name: C  # Consumption
+
+  # ------------------------------------------------------------------------- #
+  # State variables in period t+1
+  # ------------------------------------------------------------------------- #
+  - name: Kplus  # Capital in period t+1
+
+
+
+

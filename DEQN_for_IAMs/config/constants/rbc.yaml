@@ -1,0 +1,8 @@
+constants:
+  beta: 0.985  # discount factor
+  alpha: 0.3  # capital share
+  delta: 0.03  # depreciation
+  rho: 0.9    # persistence
+  shock_sd: 0.01 # standard deviation of TFP innovations
+  k_ss: 2.702938 # log capital in steady state
+  i_ss: -0.80361986 # log investment in steady state

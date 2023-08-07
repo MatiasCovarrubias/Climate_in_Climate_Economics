@@ -1,0 +1,7 @@
+N_sim_batch: 12
+N_episode_length: 12
+N_epochs_per_episode: 1
+N_minibatch_size: 12
+N_episodes: 10
+expectation_type: monomial
+keras_precision: float32

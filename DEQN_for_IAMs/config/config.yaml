@@ -3,16 +3,16 @@ hydra:
   run:
     dir: outputs/${MODEL_NAME}/${now:%Y-%m-%d}/${now:%H-%M-%S}
 defaults:
-  - constants: dice_generic_mmm_mmm
-  - net: dice_generic
-  - optimizer: dice_generic
-  - run:  dice_generic_1yts
-  - variables:  dice_generic_mmm_mmm
+  - constants: rbc
+  - net: rbc
+  - optimizer: rbc
+  - run:  rbc
+  - variables:  rbc
 seed: 42
 STARTING_POINT: LATEST
 # STARTING_POINT: /home/alexmalova/Documents/SGDP/src/DEQN/outputs/gdice_baseline/2021-10-17/18-15-58/ckpt-13
 CHECKPOINT_INTERVAL: 2
 MAX_TO_KEEP_NUMBER: 10
-MODEL_NAME:  dice_generic
+MODEL_NAME:  rbc
 initialize_each_episode: True
 error_filename: error_file.txt
